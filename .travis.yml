@@ -1,0 +1,20 @@
+language: python
+python:
+  - "3.6"
+# command to install dependencies
+install:
+  - pip install codecov
+  - pip install pytest pytest-cov
+#  - pip install -r requirements.txt
+# command to run tests
+script: pytest -q calculator.py --cov=./
+
+after_success:
+  codecov -t $codeCovKey
+
+deploy:
+  provider: s3
+  access_key_id: $Access
+  secret_access_key: $Secret
+  bucket: "cps847-a2-group-18"
+  region: us-east-2
