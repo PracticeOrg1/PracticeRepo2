@@ -17,4 +17,4 @@ deploy:
   access_key_id: $Access
   secret_access_key: $Secret
   bucket: "aws-julius"
-  region: us-east-2
+  region: Central
