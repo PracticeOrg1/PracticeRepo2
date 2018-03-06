@@ -16,5 +16,5 @@ deploy:
   provider: s3
   access_key_id: $Access
   secret_access_key: $Secret
-  bucket: "aws-julius"
+  bucket: "aws-julius.com"
   region: ca-central-1
